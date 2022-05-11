@@ -7,13 +7,24 @@
 
 .container{
     max-width: 1170px !important;
+    overflow: hidden;
 }
 
-@media (min-width: 768px){
+
+
+@media ( max-width:  913px){
 .container {
-    width: 750px;
+    width: 750px !important;
+    overflow: hidden;
 }
 }
+@media ( max-width:  541px){
+    .container {
+        width: 100% !important;
+        overflow: hidden;
+    }
+    }
+    
 
 /* TOPHEADER */
 
@@ -874,14 +885,17 @@ border-bottom: 1px solid #dedede;
 }
 
 .slide-item-1{
+    text-align: center;
     background: rgba(0, 0, 0, 0.5)  url(https://demo.themefisher.com/aviato/images/slider/slider-1.jpg);
 }
 
 .slide-item-2{
+    text-align: start;
     background: rgba(0, 0, 0, 0.5) url(https://demo.themefisher.com/aviato/images/slider/slider-3.jpg);
 }
 
 .slide-item-3{
+    text-align: end;
     background: rgba(0, 0, 0, 0.5)
       url(https://demo.themefisher.com/aviato/images/slider/slider-2.jpg);
 }
@@ -1024,6 +1038,12 @@ border-bottom: 1px solid #dedede;
     }
 }
 
+/* PRODUCT CATOGARY */
+
+.product-category{
+    padding: 80px 0px;
+}
+
 .product-header{
     text-align: center;
 }
@@ -1084,7 +1104,116 @@ border-bottom: 1px solid #dedede;
 
 .product-item-2 img{
     max-width: 100%;
-    
     height: 100%;
+    transition: all 1s ease-in-out;
+}
+
+
+@media only screen and (max-width: 768px){
+    .product-item-2{
+        width: auto;
+        height: 400px;
+       
+    }
+    .product-item-2 img{
+        width: 100%;
+        height: auto;
+    }
+    .product-content{
+        text-align: center;
+        top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+    }
+}
+
+
+
+/* TRANDY PRODUCTS */
+
+.trendy-products{
+    padding: 80px 0px;
+    background-color: #F9F9F9;
+}
+
+.col-lg-4{
+    padding: 0px 15px  !important;
+}
+
+.trandy{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.trandy img{
+    width: 100% !important;
+    transition: all .2s ease-in-out;
+    height: auto;
+}
+
+.trandy span{
+    top: 15px;
+    right: 15px;
+    padding: 4px 12px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+    background: #000000;
+    font-size: 12px;
+    position: absolute;
+}
+
+.trandy-content{
+    text-align: center;
+}
+
+.trandy-content h4{
+    margin: 15px 0px 6px;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400 ;
+    font-family: 'Poppins', sans-serif;
+}
+
+.trandy-content p{
+    font-size: 15px;
+    color: #757575;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.trandy-icons{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    top: 70%;
+    visibility: hidden;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.trandy-icons span{
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
     transition: all .3s ease-in-out;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    padding: 15.5px 16.5px;
+}
+
+.trandy-icons span:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.trandy:hover img {
+    -webkit-filter: brightness(40%);
+}
+
+.trandy:hover .trandy-icons{
+    visibility: visible;
 }
