@@ -8,6 +8,7 @@ $('.owl-carousel').owlCarousel(
         dots: true, 
         loop : true,
       }
+      
     );
     AOS.init({
         disable: function() {

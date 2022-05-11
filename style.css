@@ -1198,6 +1198,7 @@ transform: translate(-50%, -50%);
     position: relative;
     margin-left: 5px;
     margin-right: 5px;
+    
     transition: all .3s ease-in-out;
     background-color: #ffffff;
     color: #000000;
